@@ -1,0 +1,34 @@
+#server:
+#  port: 8081
+#
+#logging:
+#  level:
+#    root: INFO
+#    "com.mdp.eventbridg.consumer": DEBUG
+#    "software.amazon.awssdk": WARN
+#
+#eventbridge:
+#  region: ${AWS_REGION:us-east-2}
+#  source-bus: visit-request-bus
+#  destination-bus: visit-request-bus
+#  # Si quieres auto-crear target a un Event Bus, especifica el ARN:
+#  destination-bus-arn: ""
+#  rule-name: rule-events
+#  create-rule: false
+#  event-pattern: |
+#    {
+#      "source": ["my-global-custom-app"],
+#      "detail-type": ["detail-type"],
+#      "detail": {
+#        "eventName": ["VisitRequest"],
+#        "headers": {
+#          "applicationId": ["0001"]
+#        }
+#      }
+#    }
+#
+#aws:
+#  credentials:
+#    access-key: ${AWS_ACCESS_KEY_ID:}
+#    secret-key: ${AWS_SECRET_ACCESS_KEY:}
+#    session-token: ${AWS_SESSION_TOKEN:}
