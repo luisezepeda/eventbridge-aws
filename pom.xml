@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.eventbridge</groupId>
-    <artifactId>mdp-eventbridge-service</artifactId>
+    <artifactId>aws-eventbridge-apidestination</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -83,6 +83,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 

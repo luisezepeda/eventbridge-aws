@@ -1,28 +1,22 @@
-package com.mdp.eventbridg.consumer.model.event;
+package com.mdp.eventbridg.consumer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Client section inside the payload. For now, only includes the client's name.
+ */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class EventDetail {
+public class EventPayloadClient {
 
-  @JsonProperty("eventName")
-  private String eventName;
-
-  @Valid
-  @JsonProperty("headers")
-  private EventHeaders headers;
-
-  @Valid
-  @JsonProperty("payload")
-  private EventPayload payload;
+    @JsonProperty("name")
+    private String name;
 }

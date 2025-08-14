@@ -1,4 +1,4 @@
-package com.mdp.eventbridg.consumer.model.event;
+package com.mdp.eventbridg.consumer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * Header metadata inside event detail.
+ * Contains the application identifier and a list of reference identifiers.
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -17,10 +21,10 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EventHeaders {
 
-  @JsonProperty("applicationId")
-  private String applicationId;
+    @JsonProperty("applicationId")
+    private String applicationId;
 
-  @Valid
-  @JsonProperty("identifiers")
-  private List<EventIdentifier> identifiers;
+    @Valid
+    @JsonProperty("identifiers")
+    private List<EventIdentifier> identifiers;
 }

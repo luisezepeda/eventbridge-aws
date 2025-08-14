@@ -9,8 +9,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 @SpringBootApplication
 @ConfigurationPropertiesScan
 public class MdpEventbridgeServiceApplication {
-  public static void main(String[] args) {
-    SpringApplication.run(MdpEventbridgeServiceApplication.class, args);
-    log.info("MDP EventBridge Service started");
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(MdpEventbridgeServiceApplication.class, args);
+    }
 }
